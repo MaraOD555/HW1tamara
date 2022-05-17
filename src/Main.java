@@ -42,8 +42,8 @@ public class Main {
         int weightAllEggs = eggs * weightEggs;
         System.out.print("Необходимое количество яиц " + weightAllEggs);
 
-        int weightCocktailGr = weightAllBananas + weightNeedMilk + weightAllIceCream + weightAllEggs;
-        float weightCocktailKg = weightCocktailGr / 1000;
+        double weightCocktailGr = weightAllBananas + weightNeedMilk + weightAllIceCream + weightAllEggs;
+        double weightCocktailKg = weightCocktailGr / 1000;
 
         System.out.print("Вес завтрака спортсмена " + weightCocktailKg);
 
@@ -61,16 +61,30 @@ public class Main {
 
         // Задание 5
 
-
-
-
-
-
-
-
-
-
-
+        long incomeMariaMonth = 67_760L;
+        long incomeDenisMonth = 83_690L;
+        long incomeKristinaMonth = 76_230L;
+        long incomeMariaCurrentYear = incomeMariaMonth * 12;
+        long incomeDenisCurrentYear = incomeDenisMonth * 12;
+        long incomeKristinaCurrentYear = incomeKristinaMonth * 12;
+        long percentIncreaseMaria = incomeMariaMonth * 10/100;
+        long percentIncreaseDenis = incomeDenisMonth * 10/100;
+        long percentIncreaseKristina = incomeKristinaMonth * 10/100;
+        long increaseIncomeMaria = incomeMariaMonth + percentIncreaseMaria;
+        long increaseIncomeDenis = incomeDenisMonth + percentIncreaseDenis;
+        long increaseIncomeKristina = incomeKristinaMonth + percentIncreaseKristina;
+        System.out.println("Мария темерь получает в месяц " + increaseIncomeMaria + " рублей");
+        System.out.println("Денис темерь получает в месяц " + increaseIncomeDenis + " рублей");
+        System.out.println("Кристина темерь получает в месяц " + increaseIncomeKristina + " рублей");
+        long increaseYearMaria = increaseIncomeMaria * 12;
+        long increaseYearDenis = increaseIncomeDenis * 12;
+        long increaseYearKristina = increaseIncomeKristina *12;
+        long yearDifferenceMaria = increaseYearMaria - incomeMariaCurrentYear;
+        long yearDifferenceDenis = increaseYearDenis - incomeDenisCurrentYear;
+        long yearDifferenceKristina = increaseYearKristina - incomeKristinaCurrentYear;
+        System.out.println("Годовой доход Марии вырос на " + yearDifferenceMaria + " рублей");
+        System.out.println("Годовой доход Дениса вырос на " + yearDifferenceDenis + " рублей");
+        System.out.println("Годовой доход Кристины вырос на " + yearDifferenceKristina + " рублей");
 
     }
 }
